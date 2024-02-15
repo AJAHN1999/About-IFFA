@@ -1,11 +1,15 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root{
     --bg-color:#212529;
+    --font-family:"Roboto Mono",monospace;
 }
 
 
-
+body{
+    background-color: var(--bg-color);
+}
 
 .navbar-nav .nav-item .dropdown-toggle::after {
     display: none; /* Hide the default dropdown icon */
@@ -23,3 +27,47 @@
     background-color: var(--bg-color)
 }
 
+
+.navbar{
+    font-weight: bolder;
+}
+
+.Nominations button{
+    width: 100%;
+    font-weight: bolder;
+    font-family: "Roboto Mono";
+    background-color: gold;
+    
+    
+}
+
+.container.heading  {
+    z-index: 1;
+    font-family: "Roboto Mono";
+    color: gold;
+    position: absolute;
+    top:12%;
+    left:8%;
+    font-weight: bolder;
+    font-size: clamp(25%,3rem,4rem);
+    
+}
+
+
+.card .card-body .btn .btn-primary{
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+}
+
+/* Adding media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .container.heading {
+        font-size: clamp(20px, 4vw, 4rem); 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container.heading {
+        font-size: clamp(16px, 5vw, 4rem); 
+    }
+}
